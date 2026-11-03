@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pedirNumeroMayor100() {
+            let num = 0;
+            let finalizado = false;
+
+            while (!finalizado) {
+                num = prompt("Ingrese un numero mayor que 100");
+                if (num === "" || num === null) {
+                    console.log("Operacion cancelada");
+                    finalizado = true;
+                } else {
+                    if (num > 100) {
+                        console.log("Numero correcto: " + num);
+                        finalizado = true;
+                    } else {
+                        console.log("Numero incorrecto: " + num);
+                    }
+                }
+            }
+
+        }
+        pedirNumeroMayor100();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

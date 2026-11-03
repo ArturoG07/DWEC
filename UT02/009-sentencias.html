@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        if (-1 || 0) alert( "primero" ); // Se ejecuta ya que -1 se resuelve a true y hay un OR
+        if (-1 && 0) alert( "segundo" ); // No se ejecuta ya que 0 se resuelve a false y hay un AND
+        if (null || -1 && 1) alert( "tercero" ); // Se ejecuta ya que -1 y 1 se resuelven a true y estan dentro de un OR
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

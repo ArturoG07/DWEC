@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function inicioSesion() {
+            let usuario = prompt("Ingrese Usuario");
+            switch (usuario) {
+                case "Admin":
+                    pedirContraseña();
+                    break;
+                case "Esc":
+                case "":
+                case null:
+                case undefined:
+                    alert("Operacion cancelada");
+                    break;
+                default:
+                    alert("No te conozco");
+            }
+        }
+        
+        function pedirContraseña() {
+            let contraseña = prompt("Ingrese la contraseña");
+            switch (contraseña) {
+                case "TheMaster":
+                    alert("bienvenido");
+                    break;
+                case undefined:
+                case null:
+                case "":
+                    alert("Cancelado");
+                    break;
+                default: 
+                    alert("Contraseña Incorrecta");
+                    break;
+            }
+        }
+        inicioSesion();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

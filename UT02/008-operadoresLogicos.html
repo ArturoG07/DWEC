@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        alert( null || 2 || undefined ); // Lanza el 2 ya que es la primera condicion verdadera
+        alert( alert(1) || 2 || alert(3) ); // Lanza el 1 y el 2 por que el 2 es la primera condicion verdader
+        alert( 1 && null && 2 ); // Lanza null por que es la primera condicion falsa
+        alert( alert(1) && alert(2) ); // Lanza 1 y undefined al no poderse evaluar la primera expresion
+        alert( null || 2 && 3 || 4 ); // Lanza 3 ya que la segunda expresion es la primera verdadera y como tiene el and logico devuelve la ultima verdadera, en este caso el 3
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
