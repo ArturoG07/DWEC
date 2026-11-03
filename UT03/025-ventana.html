@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        let ventana;
+        let activa = false;
+
+        function abrirVentana(url, ancho, alto) {
+            checkActiva();
+            if (!activa) {
+            ventana = window.open(url, "_blank", `width=${ancho}, height=${alto}, left=${screen.width/2 - ancho/2}, top=${screen.height/2 - alto/2}`);
+                if (ventana === null) {
+                    console.log("Accion denegada: ventana emergente");
+                } 
+            } else {
+                console.log("Accion denegada, la ventana ya se ha creado");
+            }
+            return ventana;
+        }
+            
+        
+        function cerrarVentana() {
+            checkActiva();
+            if (activa) {
+                ventana.close();
+            } else {
+                console.log("Operacion denegada: la ventana ya ha sido cerrada o no se ha abierto aun");
+            }
+        }
+        
+        function checkActiva() {
+            if (ventana == null) {
+                activa = false;
+            } else {
+                activa = !ventana.closed;
+            }
+        }
+        //Lo bloquea
+        abrirVentana('https://www.juandecolonia.es', 500, 400);
+    </script>
+</head>
+<body>
+    <button onclick="abrirVentana('https://www.juandecolonia.es', 500, 400);"">Abrir</button>
+    <button onclick="cerrarVentana();"">Cerrar</button>
+    
+</body>
+</html>

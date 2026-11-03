@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+        button {
+            position: fixed;
+        }
+        #btn1 {
+            left: 25%;
+        }
+        #btn2 {
+            left: 50%;
+        }
+        #btn3 {
+            left: 75%;
+        }
+    </style>
+    <script>
+        function subir() {
+            window.scrollTo({top: 0, behavior: "smooth"});
+        }
+        function bajar() {
+            window.scrollBy(0, 300);
+        }
+        function desplazamiento() {
+            console.log("La ventana se ha desplazado " + (scrollX+scrollY) + "px");
+        }
+    </script>
+</head>
+<body>
+    <button id="btn1" onclick="subir()">Subir</button>
+    <button id="btn2" onclick="bajar()">Bajar</button>
+    <button id="btn3" onclick="desplazamiento()">Posicion</button>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

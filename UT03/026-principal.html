@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let ventana = null;
+      
+        function abrir() {
+          ventana = window.open("026-hija.html", "hija", "width=400,height=300");
+        }
+      
+        function enviar() {
+          if (ventana && !ventana.closed) {
+            ventana.saludar("Hola desde la ventana principal");
+          }
+        }
+      
+        function saludarDesdeHija(texto) {
+          alert("La hija dice: " + texto);
+        }
+      </script>
+</head>
+<body>
+    <button onclick="abrir()">Abrir ventana</button>
+    <button onclick="enviar()">Enviar mensaje a la hija</button>
+</body>
+</html>

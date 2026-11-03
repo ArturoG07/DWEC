@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function saludo(idioma) {
+            if (!(idioma !== null && idioma !== undefined && idioma !== null)) {
+                idioma = navigator.language;
+            }
+
+            let iniciales = (idioma.substring(0, 2)).toLowerCase();
+            let saludo;
+            if (iniciales === "es") {
+                saludo = "Hola";
+            } else if (iniciales === "fr") {
+                saludo = "Bonjour";
+            } else {
+                saludo = "Hello";
+            }
+            return saludo;
+        }
+        console.log(saludo("Español"));
+        console.log(saludo("Frances"));
+        console.log(saludo());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
