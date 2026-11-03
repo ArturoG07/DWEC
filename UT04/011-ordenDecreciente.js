@@ -1,6 +1,6 @@
 function ordenaDecreciente(array) {
     let cambiado;
-
+ 
     while (true) {
         
         cambiado = false;
