@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function almacenarEntrada() {
+            let numeros = [];
+            let continuar = true;
+
+            while (continuar) {
+                let entrada = prompt("Introduce un número:");
+
+                if (entrada === null || entrada.trim() === "") {
+                    continuar = false;
+                } else {
+                    let numero = Number(entrada);
+
+                    if (isNaN(numero)) {
+                        continuar = false;
+                    } else {
+                        numeros.push(numero);
+                    }
+                }
+            }
+
+            return numeros;
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
