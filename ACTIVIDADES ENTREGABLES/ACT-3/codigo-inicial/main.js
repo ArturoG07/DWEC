@@ -200,4 +200,12 @@ function recibirMensaje(texto) {
 function guardarFicha() {
   mostrar("<h2>5. Guardar ficha</h2>");
   // Tu código aquí
+  // Guardar ficha
+  localStorage.setItem('ficha', JSON.stringify(ficha));
+
+  // Recuperar ficha
+  ficha = JSON.parse(localStorage.getItem('ficha'));
+
+  // Mostrar
+  mostrar(ficha);
 }
